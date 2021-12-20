@@ -1,0 +1,222 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-container {
+  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+}
+
+.is-hidden {
+  display: none !important; // stylelint-disable-line declaration-no-important
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1260px; //1230 + 15 + 15 (padding с двух сторон чтобы контент не прилипал к краям)
+}
+
+.centered {
+  text-align: center;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.main-title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 130%;
+  letter-spacing: 1px;
+  color: $color-darkgray;
+  text-transform: uppercase;
+
+  span {
+    color: $color-primary;
+  }
+
+  &--home {
+    color: $color-white;
+  }
+}
+
+.main-description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: $color-lightgray;
+
+  &--home {
+    margin-bottom: 62px;
+    color: $color-white;
+  }
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 15px 39px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: $color-white;
+
+  &--stroke {
+    &-white {
+      color: $color-white;
+      border-color: $color-white;
+    }
+
+    &-primary {
+      color: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+
+  &--fill {
+    background-color: $color-primary;
+  }
+}
+
+.centered-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 130%;
+  color: $color-darkgray;
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.description {
+  margin: 0;
+  margin-bottom: 60px;
+  font-size: 18px;
+  line-height: 150%;
+  color: $color-lightgray;
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.section-offset {
+  padding-top: 120px;
+}
+
+.custom-checkbox {
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__text {
+    position: relative;
+    display: block;
+    padding-left: 27px;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-gray;
+  }
+
+  &__text::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 2px;
+    display: inline-block;
+    border: 1px solid $color-primary;
+    border-radius: 3px;
+    width: 16px;
+    height: 16px;
+    background-color: $color-primary;
+  }
+
+  &__text::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    width: 10px;
+    height: 8px;
+    background-image: url("../img/check.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  &__input:checked + &__text::after {
+    opacity: 1;
+  }
+
+  &__input:checked + &__text {
+    outline: 1px solid $color-primary;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}

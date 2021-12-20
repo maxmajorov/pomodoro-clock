@@ -1,0 +1,54 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// Компоненты страницы
+@import "./components/slider-nav";
+
+// подключения компонентов страницы (Большие компоненты)
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about-section";
+@import "./components/mission-section";
+@import "./components/services-section";
+@import "./components/portfolio-section";
+@import "./components/partners";
+@import "./components/clients-feedback";
+@import "./components/facts";
+@import "./components/news";
+@import "./components/contacts-section";
+@import "./components/footer";
+
+@import "./components/page-hero";
+@import "./components/services-content";
+@import "./components/we-offer";
+@import "./components/how-we-do";
+@import "./components/benefits";
+@import "./components/related-projects";
+@import "./components/pricing";
+
+@import "./components/portfolio";
+@import "./components/clients";
+@import "./components/project-goal";
+@import "./components/decisions";
+
+@import "./components/achieve"; //about-us => достижения
+@import "./components/about-mission";
+@import "./components/history";
+@import "./components/team";
+@import "./components/worldwide";
+
+@import "./components/positions-content";
+@import "./components/employee-benefits";
+
+// подключения компонентов страницы (Маленькие компоненты)
+@import "./components/nav";
+@import "./components/header-contacts";
+@import "./components/video-block";
+@import "./components/form-field";
+@import "./components/learn-more";
+@import "./components/social";
+@import "./components/breadcrumbs";
+@import "./components/work-images";
