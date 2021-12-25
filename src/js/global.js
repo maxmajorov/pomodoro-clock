@@ -1,1 +1,1 @@
-console.log('global');
+console.log('Hello clock')
